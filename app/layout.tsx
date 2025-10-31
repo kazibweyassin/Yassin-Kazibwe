@@ -19,6 +19,14 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Yassin Kazibwe | Software Engineer, Entrepreneur & Founder',
   description: 'Full-Stack Software Engineer building technology and businesses that connect Africa to global opportunities. Founder of Beelio Technologies, AILES Global, and VizzarJobs.com.',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   keywords: ['Yassin Kazibwe', 'Software Engineer', 'Entrepreneur', 'Beelio Technologies', 'AILES Global', 'VizzarJobs', 'CloudNest', 'Kubernetes', 'Open Source', 'Full-Stack Developer', 'Africa Tech', 'Fintech', 'Study Abroad', 'Cloud-Native'],
   authors: [{ name: 'Yassin Kazibwe' }],
   creator: 'Yassin Kazibwe',
@@ -71,6 +79,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://yassin-kazibwe.vercel.app" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#2563EB" />
         <StructuredData />
       </head>
       <body className={`${inter.variable} ${poppins.variable} font-sans`}>

@@ -1,0 +1,22 @@
+{
+  "name": "Yassin Kazibwe Portfolio",
+  "short_name": "YK Portfolio",
+  "description": "Portfolio website of Yassin Kazibwe - Software Engineer, Entrepreneur & Founder",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
