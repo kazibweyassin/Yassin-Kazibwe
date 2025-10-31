@@ -31,7 +31,7 @@ export default function SocialShare({ url, title, description }: SocialShareProp
   }
 
   const handleNativeShare = async () => {
-    if (navigator.share) {
+    if (typeof navigator !== 'undefined' && 'share' in navigator && navigator.share) {
       try {
         await navigator.share({
           title,
@@ -48,7 +48,7 @@ export default function SocialShare({ url, title, description }: SocialShareProp
     <div className="flex items-center gap-3 flex-wrap">
       <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Share:</span>
       
-      {navigator.share && (
+      {typeof navigator !== 'undefined' && 'share' in navigator && (
         <button
           onClick={handleNativeShare}
           className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors"

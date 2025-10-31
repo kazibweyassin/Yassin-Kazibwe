@@ -43,15 +43,11 @@ export function GoogleAnalytics({ measurementId }: { measurementId: string }) {
 }
 
 // Vercel Analytics Component
+// To use: npm install @vercel/analytics
+// Then add <Analytics /> from '@vercel/analytics/react' to your layout
 export function VercelAnalytics() {
-  useEffect(() => {
-    if (process.env.NEXT_PUBLIC_VERCEL_ANALYTICS) {
-      import('@vercel/analytics/react').then((mod) => {
-        // Vercel Analytics auto-initializes
-      })
-    }
-  }, [])
-
+  // Vercel Analytics will be initialized when package is installed
+  // and component is added to layout
   return null
 }
 
